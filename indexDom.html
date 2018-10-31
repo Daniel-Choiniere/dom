@@ -1,0 +1,77 @@
+<! DOCTYPE>
+
+<html>
+    <head>
+        <title>DOMinant HTML</title>
+    </head>
+    
+    <body>
+        <h1 id="maintitle">Learning DOMinant HTML</h1>
+        <h4 id="subtitle">With yours truly, Arneezy the Geek!</h4>
+        
+        <p id="marquee">Facts:</p>
+        <ul>
+            <li class="b1color">The DOM is a tree.</li>
+            <li class="b1color">HTML tags are also called Element Nodes or just elements</li>
+            <li class="b1color">You access DOM components via it's elements.</li>
+            <li class="b1color">Elements have parents, sibilings, ancestors, and descendants</li>
+            <li class="b1color">Selector a: getElementById()</li>
+            <li class="b1color">Selector b: getElementsByClassName()</li>
+        </ul>
+        
+        <p>Alternative Facts</p>
+        <ul>
+            <li class="b2color">The DOM is a tree.</li>
+            <li class="b2color">HTML tags are also called Element Nodes or just elements</li>
+            <li class="b2color">You access DOM components via it's elements.</li>
+            <li class="b2color">Elements have parents, sibilings, ancestors, and descendants</li>
+            <li class="b2color">Selector a: getElementById()</li>
+            <li class="b2color">Selector b: getElementsByClassName()</li>
+        </ul>
+        
+        <form id="nameForm" action="/action">
+            Name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="lastname"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    
+    <script>
+        // var inputName = prompt("What is your name:");
+        // document.getElementById("subtitle").innerText = "Welcome to the class " + inputName;
+       
+        function myFunction() {
+            var first = document.getElementById("first").submit();
+            var last = document.getElementById("last").submit();
+            
+            document.getElementById("subtitle").innerText = "Welcome to the class " + first;
+            document.getElementById("subtitle").innerText = "Welcome to the class " + last;
+        }
+        
+    </script>
+</html>
+    <!DOCTYPE html>
+    <html>
+    <body>
+    
+    <form id="myForm" action="/action_page.php">
+      First name: <input type="text" name="fname" value="Donald"><br>
+      Last name: <input type="text" name="lname" value="Duck"><br>
+      <input type="submit" value="Submit">
+    </form> 
+    
+    <p>Click the "Try it" button to display the number of elements in the form.</p>
+    
+    <button onclick="myFunction()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+        var x = document.getElementById("myForm").elements.length;
+        document.getElementById("demo").innerHTML = "Found " + x + " elements in the form.";
+    }
+    </script>
+    
+    </body>
+    </html>
