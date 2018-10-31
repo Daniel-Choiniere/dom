@@ -29,49 +29,29 @@
             <li class="b2color">Selector b: getElementsByClassName()</li>
         </ul>
         
-        <form id="nameForm" action="/action">
+        <form id="nameForm">
             Name: <input type="text" name="firstname"><br>
             Last name: <input type="text" name="lastname"><br><br>
-            <input type="submit" value="Submit">
+            
         </form>
-    </body>
+        
+        <button onclick="myFunction()">Submit</button>
     
     <script>
         // var inputName = prompt("What is your name:");
         // document.getElementById("subtitle").innerText = "Welcome to the class " + inputName;
        
         function myFunction() {
-            var first = document.getElementById("first").submit();
-            var last = document.getElementById("last").submit();
+            var first = document.getElementById("nameForm").elements.item(0).value;
+            var first = first[0].toUpperCase() + first.slice(1);
             
-            document.getElementById("subtitle").innerText = "Welcome to the class " + first;
-            document.getElementById("subtitle").innerText = "Welcome to the class " + last;
+            var last = document.getElementById("nameForm").elements.item(1).value;
+            var last = last[0].toUpperCase() + last.slice(1);
+            
+            document.getElementById("subtitle").innerHTML = "Welcome to the class " + first + last + "!";
         }
         
     </script>
-</html>
-    <!DOCTYPE html>
-    <html>
-    <body>
-    
-    <form id="myForm" action="/action_page.php">
-      First name: <input type="text" name="fname" value="Donald"><br>
-      Last name: <input type="text" name="lname" value="Duck"><br>
-      <input type="submit" value="Submit">
-    </form> 
-    
-    <p>Click the "Try it" button to display the number of elements in the form.</p>
-    
-    <button onclick="myFunction()">Try it</button>
-    
-    <p id="demo"></p>
-    
-    <script>
-    function myFunction() {
-        var x = document.getElementById("myForm").elements.length;
-        document.getElementById("demo").innerHTML = "Found " + x + " elements in the form.";
-    }
-    </script>
-    
     </body>
-    </html>
+</html>
+
